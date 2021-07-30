@@ -1,0 +1,34 @@
+Установка Hadoop на CentOS
+
+yum install git
+yum remove docker
+
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+sudo systemctl start docker
+docker run hello-world
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+exit
+
+скачал файл HDP_3.0.1_docker-deploy-scripts.zip c сайта https://www.cloudera.com/downloads/hortonworks-sandbox.html
+
+mkdir hadoop-docker
+положить содержимое архива в папку, перейти в папку, запустить скрипт
+
+cd /path/to/script
+sh docker-deploy-{HDPversion}.sh
+
+после установки скачать новый zip 
+в нём скрипт по разворачиванию Cloudera DataFlow (Ambari)
+
+cd /path/to/script
+sh enable-native-cda.sh
+
+
+HDP Sandox 
+
+1. Cкачать архив для Docker (https://www.cloudera.com/downloads/hortonworks-sandbox/hdp.html?utm_source=mktg-tutorial)
+2. 
