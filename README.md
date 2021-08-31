@@ -1,4 +1,4 @@
-# hadoop
+# Sandbox HDP & Free IPA
 **Sandbox HDP
 Поднятие FREE-IPA Server в Docker**
 
