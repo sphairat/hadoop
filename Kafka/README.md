@@ -1,4 +1,4 @@
-### Открытие консоли в контейнере с Sandbox-hdp. Перемещение в папку с Kafka.
+### РћС‚РєСЂС‹С‚РёРµ РєРѕРЅСЃРѕР»Рё РІ РєРѕРЅС‚РµР№РЅРµСЂРµ СЃ Sandbox-hdp. РџРµСЂРµРјРµС‰РµРЅРёРµ РІ РїР°РїРєСѓ СЃ Kafka.
 
 ```bash
 [user@falcon ~]$ docker exec -it sandbox-hdp /bin/bash
@@ -8,13 +8,13 @@
 [root@sandbox-hdp usr]# cd hdp/current/kafka-broker/bin
 ```
 
-### Cоздание топика *message* c фактором репликации 1 и тримя партициями
+### CРѕР·РґР°РЅРёРµ С‚РѕРїРёРєР° *message* c С„Р°РєС‚РѕСЂРѕРј СЂРµРїР»РёРєР°С†РёРё 1 Рё С‚СЂРёРјСЏ РїР°СЂС‚РёС†РёСЏРјРё
 
 ```bash
 [root@sandbox-hdp bin]# ./kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 3 --topic messages
 ```
 
-### Проверка создания топика
+### РџСЂРѕРІРµСЂРєР° СЃРѕР·РґР°РЅРёСЏ С‚РѕРїРёРєР°
 
 ```bash
 [root@sandbox-hdp bin]# ./kafka-topics.sh --list --zookeeper localhost:2181
@@ -24,7 +24,7 @@ __consumer_offsets
 messages
 ```
 
-### Открытие в одной консоли продюсера и запись сообщений в топик *message*
+### РћС‚РєСЂС‹С‚РёРµ РІ РѕРґРЅРѕР№ РєРѕРЅСЃРѕР»Рё РїСЂРѕРґСЋСЃРµСЂР° Рё Р·Р°РїРёСЃСЊ СЃРѕРѕР±С‰РµРЅРёР№ РІ С‚РѕРїРёРє *message*
 
 ```bash
 [root@sandbox-hdp bin]# ./kafka-console-producer.sh --broker-list [sandbox-hdp.hortonworks.com:6667](http://sandbox-hdp.hortonworks.com:6667/) --topic messages
@@ -33,7 +33,7 @@ messages
 >ThreeMessage
 ```
 
-### Открытие в другой консоли потребителя и чтение сообщений от продюсера в топике *message*
+### РћС‚РєСЂС‹С‚РёРµ РІ РґСЂСѓРіРѕР№ РєРѕРЅСЃРѕР»Рё РїРѕС‚СЂРµР±РёС‚РµР»СЏ Рё С‡С‚РµРЅРёРµ СЃРѕРѕР±С‰РµРЅРёР№ РѕС‚ РїСЂРѕРґСЋСЃРµСЂР° РІ С‚РѕРїРёРєРµ *message*
 
 ```bash
 [root@sandbox-hdp bin]# ./kafka-console-consumer.sh --zookeeper [sandbox-hdp.hortonworks.com:2181](http://sandbox-hdp.hortonworks.com:2181/) --topic messages --from-beginning
@@ -42,7 +42,7 @@ messages
 >ThreeMessage
 ```
 
-### Запуск файла [message.py](http://message.py) и чтение результата в топике message
+### Р—Р°РїСѓСЃРє С„Р°Р№Р»Р° [message.py] Рё С‡С‚РµРЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° РІ С‚РѕРїРёРєРµ message
 
 ```bash
 [root@sandbox-hdp kafka]# cat message.py
