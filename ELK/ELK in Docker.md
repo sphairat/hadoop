@@ -355,11 +355,12 @@ user@swift:~/elk$ docker-compose up -d nginx
 
 Идём к Portainer и наблюдаем все поднятые контейры:
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a0d1fbd5-eac1-4bf6-bac3-63f716637c80/Untitled.png)
+![image](https://user-images.githubusercontent.com/40624766/131563073-88e6a826-82fe-4289-8759-fe1c98b832b5.png)
+
 
 Открываем http://172.17.17.33/kibana. Вводим ранее созданные данные для nginx (admin/password). 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bc26fe8c-5c01-411b-a3e6-ee56d6c2ca3a/Untitled.png)
+![image](https://user-images.githubusercontent.com/40624766/131563029-3e2aebc3-c750-410c-bac6-9b0def490f6c.png)
 
 ELK стек готов к получению данных.
 
